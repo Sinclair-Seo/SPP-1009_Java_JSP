@@ -9,4 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+  	<servlet-name>SPP-1009_Java_JSP</servlet-name>
+  	<servlet-class>com.javalec.ex.HelloWorld</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SPP-1009_Java_JSP</servlet-name>
+  	<url-pattern>/hw</url-pattern>
+  </servlet-mapping>
 </web-app>
