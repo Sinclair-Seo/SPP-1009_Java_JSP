@@ -3,11 +3,11 @@
 - [x] [제 01강 웹프로그래밍][01]
 - [x] [제 02강 개발 환경 설정][02]
 - [x] [제 03강 JSP 맛보기][03]
-- [ ] [제 04강 Servlet 맛보기][04]
-- [ ] [제 05강 Servlet 본격적으로 살펴보기-I][05]
-- [ ] [제 06강 Servlet 본격적으로 살펴보기-II][06]
-- [ ] [제 07강 Servlet 본격적으로 살펴보기-III][07]
-- [ ] [제 08강 Servlet 본격적으로 살펴보기-IV][08]
+- [x] [제 04강 Servlet 맛보기][04]
+- [x] [제 05강 Servlet 본격적으로 살펴보기 - I][05]
+- [ ] [제 06강 Servlet 본격적으로 살펴보기 - II][06]
+- [ ] [제 07강 Servlet 본격적으로 살펴보기 - III][07]
+- [ ] [제 08강 Servlet 본격적으로 살펴보기 - IV][08]
 - [ ] [제 09강 JSP 본격적으로 살펴보기-I][09]
 - [ ] [제 10강 JSP 본격적으로 살펴보기-II][10]
 - [ ] [제 11강 JSP 본격적으로 살펴보기-III][11]
@@ -32,8 +32,8 @@
 - [ ] [제 30강 MVC패턴을 이용한 게시판 만들기- IV][30]
 
 [main]: https://seouliotcenter.tistory.com/tag/jsp "실전 JSP 동영상과정"
-[01]: https://www.youtube.com/watch?v=Aw-lOlR0I28&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=1
-[02]: https://www.youtube.com/watch?v=qJU0914Nv84&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=2
+[01]: https://www.youtube.com/watch?v=Aw-lOlR0I28&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=1 "제 01강 웹프로그래밍"
+[02]: https://www.youtube.com/watch?v=qJU0914Nv84&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=2 "제 02강 개발 환경 설정"
 [03]: https://www.youtube.com/watch?v=ImkeLKI1yLk&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=3
 [04]: https://www.youtube.com/watch?v=A4QMTvoMLWA&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=4
 [05]: https://www.youtube.com/watch?v=9k1tQ6-CaMM&list=PLOJ3X9PwqLzvyIx3mwuf-muEd5TUI-yph&index=5
