@@ -10,7 +10,7 @@
 	![Spring Bean Life Cycle](/SPP-1009_Java_JSP/images/SpringBeanLifeCycle.jfif)
 	
 - [x] [제 07강 Servlet 본격적으로 살펴보기 - III][07]
-- [ ] [제 08강 Servlet 본격적으로 살펴보기 - IV][08]
+- [x] [제 08강 Servlet 본격적으로 살펴보기 - IV][08]
 - [ ] [제 09강 JSP 본격적으로 살펴보기-I][09]
 - [ ] [제 10강 JSP 본격적으로 살펴보기-II][10]
 - [ ] [제 11강 JSP 본격적으로 살펴보기-III][11]
