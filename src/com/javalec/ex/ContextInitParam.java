@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletInitParam
+ * Servlet implementation class ContextInitParam
  */
-//@WebServlet("/ServletInitParam")
-public class ServletInitParam extends HttpServlet {
+@WebServlet("/ContextParam")
+public class ContextInitParam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletInitParam() {
+    public ContextInitParam() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,17 +29,19 @@ public class ServletInitParam extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("doGet");
-
-		String id = getInitParameter("id");
-		String pw = getInitParameter("pw");
-		String path = getInitParameter("path");
-
-		response.setContentType("text/html; charset=EUC-KR");
+		
+		String id = getServletContext().getInitParameter("id");
+		String pw = getServletContext().getInitParameter("pw");
+		String path = getServletContext().getInitParameter("path");
+		
+		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
+
 		writer.println("<html><head></head><body>");
-		writer.println("���̵� : " + id + "<br />");
-		writer.println("��й�ȣ : " + pw + "<br />");
+		writer.println("id : " + id + "<br />");
+		writer.println("pw : " + pw + "<br />");
 		writer.println("path : " + path);
 		writer.println("</body></html>");
 
@@ -51,6 +53,7 @@ public class ServletInitParam extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		//doGet(request, response);
 		System.out.println("doPost");
 	}
 

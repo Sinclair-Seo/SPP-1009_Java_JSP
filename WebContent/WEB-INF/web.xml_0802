@@ -10,8 +10,17 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-	<listener>
-		<listener-class>com.javalec.ex.ContextListenerEx</listener-class>
-	</listener>
+  <context-param>
+  	<param-name>id</param-name>
+  	<param-value>sinclair</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>pw</param-name>
+  	<param-value>demian</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>path</param-name>
+  	<param-value>C:\MyWorks\CodeArchives\SPP-1009_Java_JSP</param-value>
+  </context-param>
   
 </web-app>
