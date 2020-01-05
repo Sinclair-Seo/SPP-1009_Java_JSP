@@ -5,7 +5,8 @@
 - [x] [제 03강 JSP 맛보기][03]
 - [x] [제 04강 Servlet 맛보기][04]
 - [x] [제 05강 Servlet 본격적으로 살펴보기 - I][05]
-- [ ] [제 06강 Servlet 본격적으로 살펴보기 - II][06]
+- [x] [제 06강 Servlet 본격적으로 살펴보기 - II][06]	
+	![Spring Bean Life Cycle](./images/SpringBeanLifeCycle.jfif)
 - [ ] [제 07강 Servlet 본격적으로 살펴보기 - III][07]
 - [ ] [제 08강 Servlet 본격적으로 살펴보기 - IV][08]
 - [ ] [제 09강 JSP 본격적으로 살펴보기-I][09]
