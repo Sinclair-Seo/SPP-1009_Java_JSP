@@ -3,7 +3,7 @@
 <%
 	if(session.getAttribute("ValidMem") == null) {
 %>
-	<<jsp:forward page="login.jsp" />
+	<jsp:forward page="login.jsp" />
 <%
 	}
 
