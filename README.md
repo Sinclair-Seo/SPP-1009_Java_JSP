@@ -24,7 +24,7 @@
 - [x] [제 19강 데이터 베이스 - III][19]
 - [x] [제 20강 커넥션풀][20]
 - [x] [제 21강 회원 인증 프로그래밍][21]
-- [ ] [제 22강 파일 업로드][22]
+- [x] [제 22강 파일 업로드][22]
 - [ ] [제 23강 EL(Expression Language)][23]
 - [ ] [제 24강 JSTL(JSP standard Tag Library)][24]
 - [ ] [제 25강 FrontController 패턴과 Command 패턴][25]
