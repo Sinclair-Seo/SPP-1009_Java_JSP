@@ -28,7 +28,7 @@
 - [x] [제 23강 EL(Expression Language)][23]
 - [x] [제 24강 JSTL(JSP standard Tag Library)][24]
 - [x] [제 25강 FrontController 패턴과 Command 패턴][25]
-- [ ] [제 26강 포워딩(Forwarding)][26]
+- [x] [제 26강 포워딩(Forwarding)][26]
 - [ ] [제 27강 MVC패턴을 이용한 게시판 만들기- I][27]
 - [ ] [제 28강 MVC패턴을 이용한 게시판 만들기- II][28]
 - [ ] [제 29강 MVC패턴을 이용한 게시판 만들기- II][29]
