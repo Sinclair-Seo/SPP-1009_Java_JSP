@@ -4,22 +4,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.javalec.ex.dao.BDao;
-import com.javalec.ex.dto.BDto;
 
-public class BContentCommand implements BCommand {
-
-	public BContentCommand() {
-		// TODO Auto-generated constructor stub
-	}
+public class BModifyCommand implements BCommand {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) {
 		// TODO Auto-generated method stub
 		String bId = req.getParameter("bId");
-		BDao dao = new BDao();
-		BDto dto = dao.contentView(bId);
+		String bName = req.getParameter("bName");
+		String bTitle = req.getParameter("bTitle");
+		String bContent = req.getParameter("bContent");
 
-		req.setAttribute("content_view", dto);
+		BDao dao = new BDao();
+		dao.modify(bId, bName, bTitle, bContent);
 
 	}
 

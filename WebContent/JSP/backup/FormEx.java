@@ -1,10 +1,9 @@
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Arrays;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,35 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LifeCycleEx
+ * Servlet implementation class FormEx
  */
-@WebServlet("/LC")
-public class LifeCycleEx extends HttpServlet {
+@WebServlet("/FormEx")
+public class FormEx extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LifeCycleEx() {
+    public FormEx() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-		System.out.println("Init");
-	}
-
-	/**
-	 * @see Servlet#destroy()
-	 */
-	public void destroy() {
-		// TODO Auto-generated method stub
-		System.out.println("Destroy");
-	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,18 +41,27 @@ public class LifeCycleEx extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		System.out.println("doPost");
-	}
-	
-	@PostConstruct
-	private void initPostConstruct() {
-		// TODO Auto-generated method stub
-		System.out.println("PostConstruct");
-	}
-	
-	@PreDestroy
-	public void initPreDestroy() {
-		// TODO Auto-generated method stub
-		System.out.println("PreDestroy");
+		
+		request.setCharacterEncoding("UTF-8");
+		
+		String name = request.getParameter("name");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String[] hobbys = request.getParameterValues("hobby");
+		String major = request.getParameter("major");
+		String protocol = request.getParameter("protocol");
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter writer = response.getWriter();
+		
+		writer.println("<html><head></head><body>");
+		writer.println("이름: " + name + "<br/>");
+		writer.println("아이디: " + id + "<br/>");
+		writer.println("비밀번호: " + pw + "<br/>");
+		writer.println("취미: " + Arrays.toString(hobbys) + "<br/>");
+		writer.println("전공: " + major + "<br/>");
+		writer.println("프로토콜: " + protocol + "<br/>");
+		writer.println("</body></html>");
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloWorld
+ * Servlet implementation class ContextInitParam
  */
-@WebServlet("/PostMethod")
-public class PostMethod extends HttpServlet {
+@WebServlet("/ContextParam")
+public class ContextInitParam extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PostMethod() {
+    public ContextInitParam() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,17 +32,19 @@ public class PostMethod extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("doGet");
 		
+		String id = getServletContext().getInitParameter("id");
+		String pw = getServletContext().getInitParameter("pw");
+		String path = getServletContext().getInitParameter("path");
+		
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter writer = response.getWriter();
-		
-		writer.println("<html>");
-		writer.println("<head>");
-		writer.println("</head>");
-		writer.println("<body>");
-		writer.println("Hello doGet");
-		writer.println("</body>");
-		writer.println("</html>");
-		
+
+		writer.println("<html><head></head><body>");
+		writer.println("id : " + id + "<br />");
+		writer.println("pw : " + pw + "<br />");
+		writer.println("path : " + path);
+		writer.println("</body></html>");
+
 		writer.close();
 	}
 
@@ -53,19 +55,6 @@ public class PostMethod extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		System.out.println("doPost");
-		
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter writer = response.getWriter();
-		
-		writer.println("<html>");
-		writer.println("<head>");
-		writer.println("</head>");
-		writer.println("<body>");
-		writer.println("<h1>Hello doPost</h1>");
-		writer.println("</body>");
-		writer.println("</html>");
-		
-		writer.close();
 	}
 
 }

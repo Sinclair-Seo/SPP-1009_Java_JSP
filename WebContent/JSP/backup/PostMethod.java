@@ -1,4 +1,4 @@
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloWorld
  */
-@WebServlet("/HWorld")
-public class HelloWorld extends HttpServlet {
+@WebServlet("/PostMethod")
+public class PostMethod extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloWorld() {
+    public PostMethod() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -53,6 +53,19 @@ public class HelloWorld extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		System.out.println("doPost");
+		
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter writer = response.getWriter();
+		
+		writer.println("<html>");
+		writer.println("<head>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("<h1>Hello doPost</h1>");
+		writer.println("</body>");
+		writer.println("</html>");
+		
+		writer.close();
 	}
 
 }

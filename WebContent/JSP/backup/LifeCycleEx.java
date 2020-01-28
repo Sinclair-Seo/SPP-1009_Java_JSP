@@ -1,8 +1,10 @@
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,19 +12,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ContextInitParam
+ * Servlet implementation class LifeCycleEx
  */
-@WebServlet("/ContextParam")
-public class ContextInitParam extends HttpServlet {
+@WebServlet("/LC")
+public class LifeCycleEx extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ContextInitParam() {
+    public LifeCycleEx() {
         super();
         // TODO Auto-generated constructor stub
     }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+		System.out.println("Init");
+	}
+
+	/**
+	 * @see Servlet#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+		System.out.println("Destroy");
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -31,21 +49,6 @@ public class ContextInitParam extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("doGet");
-		
-		String id = getServletContext().getInitParameter("id");
-		String pw = getServletContext().getInitParameter("pw");
-		String path = getServletContext().getInitParameter("path");
-		
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter writer = response.getWriter();
-
-		writer.println("<html><head></head><body>");
-		writer.println("id : " + id + "<br />");
-		writer.println("pw : " + pw + "<br />");
-		writer.println("path : " + path);
-		writer.println("</body></html>");
-
-		writer.close();
 	}
 
 	/**
@@ -55,6 +58,18 @@ public class ContextInitParam extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		System.out.println("doPost");
+	}
+	
+	@PostConstruct
+	private void initPostConstruct() {
+		// TODO Auto-generated method stub
+		System.out.println("PostConstruct");
+	}
+	
+	@PreDestroy
+	public void initPreDestroy() {
+		// TODO Auto-generated method stub
+		System.out.println("PreDestroy");
 	}
 
 }

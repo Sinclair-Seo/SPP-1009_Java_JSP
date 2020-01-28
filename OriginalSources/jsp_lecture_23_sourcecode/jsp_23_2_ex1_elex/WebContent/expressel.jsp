@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<jsp:useBean id="member" class="com.javalec.ex.MemberInfo" scope="page" />
+<jsp:useBean id="member" class="com.javalec.backup.MemberInfo" scope="page" />
 <jsp:setProperty name="member" property="name" value="ȫ�浿"/>
 <jsp:setProperty name="member" property="id" value="abc"/>
 <jsp:setProperty name="member" property="pw" value="123"/>

@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <% request.setCharacterEncoding("EUC-KR"); %>
-<jsp:useBean id="dto" class="com.javalec.ex.MemberDto"/>
+<jsp:useBean id="dto" class="com.javalec.backup.MemberDto"/>
 <jsp:setProperty name="dto" property="*" />
 <%
 		dto.setrDate(new Timestamp(System.currentTimeMillis()));

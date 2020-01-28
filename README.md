@@ -34,7 +34,7 @@
 	![MVC Pattern](/SPP-1009_Java_JSP/images/MVC_Pattern.png)
 
 - [x] [제 28강 MVC패턴을 이용한 게시판 만들기- II][28]
-- [ ] [제 29강 MVC패턴을 이용한 게시판 만들기- II][29]
+- [x] [제 29강 MVC패턴을 이용한 게시판 만들기- III][29]
 - [ ] [제 30강 MVC패턴을 이용한 게시판 만들기- IV][30]
 
 [main]: https://seouliotcenter.tistory.com/tag/jsp "실전 JSP 동영상과정"

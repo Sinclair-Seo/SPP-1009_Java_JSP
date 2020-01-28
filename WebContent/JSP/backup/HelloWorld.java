@@ -1,26 +1,25 @@
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletInitParam
+ * Servlet implementation class HelloWorld
  */
-@WebServlet(urlPatterns= {"/InitParam"}, initParams = {@WebInitParam(name = "id", value = "sinclair"), @WebInitParam(name = "pw", value = "demian"), @WebInitParam(name = "path", value = "C:\\MyWorks\\CodeArchives\\SPP-1009_Java_JSP")})
-public class ServletInitParam extends HttpServlet {
+@WebServlet("/HWorld")
+public class HelloWorld extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletInitParam() {
+    public HelloWorld() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,20 +32,16 @@ public class ServletInitParam extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("doGet");
 		
-		//request.setCharacterEncoding("UTF-8");
-		
-		String id = getInitParameter("id");
-		String pw = getInitParameter("pw");
-		String path = getInitParameter("path");
-		
 		response.setContentType("text/html; charset=UTF-8");
-		
 		PrintWriter writer = response.getWriter();
-		writer.println("<html><head></head><body>");
-		writer.println("아이디 : " + id + "<br />");
-		writer.println("비밀번호: " + pw + "<br />");
-		writer.println("path : " + path);
-		writer.println("</body></html>");
+		
+		writer.println("<html>");
+		writer.println("<head>");
+		writer.println("</head>");
+		writer.println("<body>");
+		writer.println("Hello doGet");
+		writer.println("</body>");
+		writer.println("</html>");
 		
 		writer.close();
 	}

@@ -1,9 +1,9 @@
-<%@page import="com.javalec.ex.MemberDao"%>
+<%@page import="com.javalec.backup.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("UTF-8"); %>
 
-<jsp:useBean id="dto" class="com.javalec.ex.MemberDto" scope="page" />
+<jsp:useBean id="dto" class="com.javalec.backup.MemberDto" scope="page" />
 <jsp:setProperty property="*" name="dto" />
 
 <%

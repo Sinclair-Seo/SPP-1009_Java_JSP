@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.javalec.ex;
+package com.javalec.backup;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
